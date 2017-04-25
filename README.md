@@ -6,7 +6,7 @@ Welcome to the WDC Fall 2017 Meeting GitBook! Here we'll set up all of the tutor
 
 Every meeting we will talk about a new topic. Each meeting will build upon the last. Each meeting will have a list of resources. If you are unable to attend a meeting, you can take a look at this GitBook for more info.
 
-##Goal
+## Goal
 
 The Purdue Web Dev Club's mission is to introduce web to the Purdue community. 
 
