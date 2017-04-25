@@ -1,3 +1,8 @@
-# My Awesome Book
+# WDC Fall 2017 Meeting GitBook
 
-This file file serves as your book's preface, a great place to describe your book's content and ideas.
+Welcome to the WDC Fall 2017 Meeting GitBook! Here we'll set up all of the tutorials/links/resources needed for the Meetings! 
+
+This is currently a WIP, but will be done soon!
+
+
+
