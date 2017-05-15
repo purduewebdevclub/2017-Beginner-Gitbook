@@ -60,4 +60,9 @@ Go ahead and open this up in your browser!
 ### Header tags
 Header tags (`<h1>...<h2>...<h3>...until <h6>`) are to show bolded titles. For example, you need to write a new page and would like to show your name in bold, you would use a header tag. There are multiple different headers ranging from `h1` to `h6`. The larger the number, the smaller the header. For example, `h1` is a lot larger than an `h5`.
 
-### Paragraph tags
+#### Example:
+
+
+### Paragraph tag
+The paragraph tag is when you'd like to display large blocks of text. 
+#### Example: 
