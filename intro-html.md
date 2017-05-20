@@ -49,13 +49,49 @@ Go ahead and open this up in your browser!
 `<html>` is so that your browser understands that this is where your site will start.
 `</html` is so that your browser knows where your site's HTML will end. `<element-name>` indicates the starting `element-name` tag. `</element-name>` indicates the ending `element-name` tag.
 
+```html
+<html>
+    <!--This is a comment-->
+    <!--This is where the code of your webpage goes-->
+</html>
+```
+
 ### Body Tag
 `<body>` tag is used so that the browser knows where the main content of your application/website lies. This is where you want to show all of your info.
+```html
+<html>
+    <body>
+        <!--This is where the heart of your content goes!-->
+    </body>
+</html>
+```
+
 
 ### Div Tag
 `<div>` is a container for other tags or information. 
 
 **Notice: You can have other elements between the starting and ending tags, or text**
+```html
+<html>
+    <body>
+        <div>
+        <!--Contain elements here!-->
+        </div>
+    </body>
+</html>
+```
+When would you want to use `div`s?
+Good question! A good website is written with proper organization in mind. Your web page is going to be complicated at some points and it's a good idea to divide it up. That's what `div` tags are for. For example, if you have a page with a left column and right column, you would have a setup like this:
+```html
+<html>
+    <body>
+        <div> <!--Global container-->
+            <div> <!--Left container--> </div>
+            <div> <!--Right container--> </div>
+        </div>
+    </body>
+</html>
+```
 
 ### Header tags
 Header tags (`<h1>...<h2>...<h3>...until <h6>`) are to show bolded titles. For example, you need to write a new page and would like to show your name in bold, you would use a header tag. There are multiple different headers ranging from `h1` to `h6`. The larger the number, the smaller the header. For example, `h1` is a lot larger than an `h5`.
