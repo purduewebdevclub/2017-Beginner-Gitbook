@@ -26,6 +26,8 @@ Server: Accepts requests from client. Most of the security and asset/resource ma
 
 **Context**: When you visit https://google.com, there are computers that figure out that google.com refers to a server with a specific internet address. Based on this, it (your browser, the client) talks to the server and tells it you need the route "/". Your server realizes you want index.html and sends that info back to the browser and you're able to search. Most of the security happens at the server-side!
 
+![Client/Server Model](https://upload.wikimedia.org/wikipedia/commons/thumb/c/c9/Client-server-model.svg/1200px-Client-server-model.svg.png)
+
 ## HTML
 
 HTML stands for **HyperText Markup Language**. It's basically the skeleton of your website. To further understand what it does, let's write our own site.
@@ -126,3 +128,6 @@ Quo principes efficiendi ex. Ei qui impetus omnesque, pri ea tota vidit dicant. 
 
 Has te zril voluptatum philosophia, cum velit graeci mnesarchum id, ex his nulla maiestatis. Usu no assum propriae theophrastus. Mazim quidam pri ut, gloriatur concludaturque quo cu. At purto lorem eos. Ne dicunt reprimique usu, mea ea suavitate constituto, sea no essent concludaturque. Melius prodesset nec ne, eu equidem honestatis mea, diam utamur id vim. Postulant contentiones pri no. </p>
 ```
+
+## Workshop
+TODO
