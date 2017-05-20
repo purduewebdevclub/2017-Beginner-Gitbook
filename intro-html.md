@@ -97,8 +97,31 @@ Good question! A good website is written with proper organization in mind. Your 
 Header tags (`<h1>...<h2>...<h3>...until <h6>`) are to show bolded titles. For example, you need to write a new page and would like to show your name in bold, you would use a header tag. There are multiple different headers ranging from `h1` to `h6`. The larger the number, the smaller the header. For example, `h1` is a lot larger than an `h5`.
 
 #### Example:
-
+```html
+<html>
+    <body>
+        <div>
+            <h1> This is large </h1>
+            <h2> This is smaller </h2>
+            <h3> This is even smaller </h3>
+            <h4> This is smaller than that </h4>
+            <h5> This is...getting small </h5>
+            <h6> Smallest! </h6>
+        </div>
+    </body>
+</html>
+```
 
 ### Paragraph tag
 The paragraph tag is when you'd like to display large blocks of text. 
-#### Example: 
+```html
+<p> Lorem ipsum dolor sit amet, his nihil quaestio in. In melius inimicus constituto nam. Ludus voluptua vel ea, agam persius propriae mei ex, nisl esse mucius at vis. Sed delectus ponderum recusabo te.
+
+Sed et erat inani, aperiri vivendo intellegam ea vix. Has minim errem id, eos ei epicurei tacimates voluptatibus. Deserunt quaestio no est, ea nec feugiat instructior. An hinc quaestio per, debet vocent comprehensam est cu. Sit paulo nostro detracto at.
+
+Nihil nostrud assueverit duo ut, est tale definiebas id. Vis utinam patrioque urbanitas ad. Has ad quem ubique veritus. Quod sensibus concludaturque at pri, mea audiam malorum cu. Ei vim quod errem sensibus, per habeo soleat omittam cu.
+
+Quo principes efficiendi ex. Ei qui impetus omnesque, pri ea tota vidit dicant. Nibh debet expetenda nec ex, ad decore reformidans has. Duo lorem delicatissimi ut.
+
+Has te zril voluptatum philosophia, cum velit graeci mnesarchum id, ex his nulla maiestatis. Usu no assum propriae theophrastus. Mazim quidam pri ut, gloriatur concludaturque quo cu. At purto lorem eos. Ne dicunt reprimique usu, mea ea suavitate constituto, sea no essent concludaturque. Melius prodesset nec ne, eu equidem honestatis mea, diam utamur id vim. Postulant contentiones pri no. </p>
+```
