@@ -113,6 +113,7 @@ Header tags (`<h1>...<h2>...<h3>...until <h6>`) are to show bolded titles. For e
 ```
 
 ### Paragraph tag
+
 The paragraph tag is when you'd like to display large blocks of text. 
 ```html
 <p> Lorem ipsum dolor sit amet, his nihil quaestio in. In melius inimicus constituto nam. Ludus voluptua vel ea, agam persius propriae mei ex, nisl esse mucius at vis. Sed delectus ponderum recusabo te.
