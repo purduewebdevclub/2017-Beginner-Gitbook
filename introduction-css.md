@@ -8,8 +8,8 @@ CSS is for stylizing your websites.
 2. Add the following `<head>` tag to your html:
 ```html
 <html>
-    <head>
-        <link href="styles.css" type="text/css" rel="stylesheet">
+    <head> <!--Section of HTML to make sure you can add links and references to files-->
+        <link href="styles.css" type="text/css" rel="stylesheet"> <!--Links to another css file-->
     </head>
         ...
     <body>
@@ -17,6 +17,7 @@ CSS is for stylizing your websites.
     </body>
 </html>
 ```
+
 ## Selectors
 In CSS, you can apply "styling" to different elements, but in order to do that, you need a way to select the different items.
 
