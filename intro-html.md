@@ -24,7 +24,7 @@ Client: Sends requests to your server.
 
 Server: Accepts requests from client. Most of the security and asset/resource management happens here.
 
-**Context**: When you visit https://google.com, there are computers that figure out that google.com refers to a server with a specific internet address. Based on this, it (your browser, the client) talks to the server and tells it you need the route "/". Your server realizes you want index.html and sends that info back to the browser and you're able to search. Most of the security happens at the server-side!
+**Context**: When you visit https://google.com, there are a group of computers (DNS - Domain Name Servers) that figure out that google.com refers to a server with a specific internet address. Based on this, it (your browser, the client) talks to the server and tells it you need the route "/". Your server realizes you want index.html and sends that info back to the browser and you're able to search. Most of the security happens at the server-side!
 
 ![Client/Server Model](https://upload.wikimedia.org/wikipedia/commons/thumb/c/c9/Client-server-model.svg/1200px-Client-server-model.svg.png)
 
