@@ -130,4 +130,35 @@ Has te zril voluptatum philosophia, cum velit graeci mnesarchum id, ex his nulla
 ```
 
 ## Workshop
-TODO
+
+### Tribute Page
+For the very first workshop, create a simple tribute page to any personality of your choice.
+The basic requirements for this are that the web page
+* Have a title at the top, with the name of the person this is a tribute to and your name next to that.
+    * Format it and choose a visually appealing design
+* There should be an image of the tributee
+    * links the user to a website where they can read more (will most probably be Wikipedia).
+* A body of text that is the width of the image should follow containing information about the tributee.
+
+A very basic wireframe of what it should look like can be found [here](http://imgur.com/a/zQvBy)
+
+A sample example can be found [here](https://codepen.io/redixhumayun/pen/pyGByG)
+
+Here is the basic HTML skeleton you will need to get started.
+
+```html
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset='UTF-8'>
+        <title><!--Replace with your own title--></title>
+    </head>
+    <body>
+        <!--Your code goes here-->
+    </body>
+</html>
+```
+
+Save the above code into an index.html file using your preferred editor. Double click on the file nad it should open a new webpage in your default browser. As you make changes to the HTML, reload the page in the browser to see the changes take effect.
+
+Beyond these requirements, you are free to experiment as you wish. Give the page your own personal touch.
