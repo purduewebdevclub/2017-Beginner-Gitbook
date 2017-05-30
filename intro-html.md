@@ -131,3 +131,12 @@ Has te zril voluptatum philosophia, cum velit graeci mnesarchum id, ex his nulla
 
 ## Workshop
 TODO
+
+####Tribute Page
+For the very first workshop, create a simple tribute page to any personality of your choice. The basic requirements for this are that the web page have a navbar at the top, with the name of the person this is a tribute to and your name in the right of the navbar. There should be an image of the tributee, which should be a link that directs the user to a website where they can read more. A body of text that is the width of the image should follow containing information about the tributee. 
+
+A very basic wireframe of what it should look like can be found [here](http://imgur.com/a/zQvBy)
+
+A sample example can be found [here](https://codepen.io/redixhumayun/pen/pyGByG)
+
+Beyond these requirements, 
