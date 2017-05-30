@@ -139,4 +139,4 @@ A very basic wireframe of what it should look like can be found [here](http://im
 
 A sample example can be found [here](https://codepen.io/redixhumayun/pen/pyGByG)
 
-Beyond these requirements, 
+Beyond these requirements, you are free to experiment as you wish. Give the page your own personal touch. 
