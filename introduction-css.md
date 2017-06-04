@@ -74,6 +74,8 @@ Classes are a way to group elements together. If you want to apply a set of styl
 | text-align     | `center, left, right` | Align text a certain way |
 | color          | `blue, red, #34E3B1`  | Set text color |
 | background-color | `any color` | Set background color |
+| display        | `inline|block|inline-block|none` | changes wrapping of HTML elements |
+| width/height   | `%|px|em|auto` | changes width/height of element |
 
 ## Workshop
 TODO!
