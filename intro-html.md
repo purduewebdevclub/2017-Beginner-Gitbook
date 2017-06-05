@@ -147,10 +147,10 @@ Here is the basic HTML skeleton you will need to get started.
 <html>
     <head>
         <meta charset='UTF-8'>
-        <title>Replace with your own title</title>
+        <title><!--Replace with your own title--></title>
     </head>
     <body>
-        Your code goes here
+        <!--Your code goes here-->
     </body>
 </html>
 ```
