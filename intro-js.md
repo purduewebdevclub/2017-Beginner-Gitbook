@@ -137,9 +137,9 @@ You might see this form of a boolean operator used in certain places, so we want
 
 It is possible to typecast an object (for example) to a boolean type using a double not operator (that is, !!)
 
-``javascript 
+```javascript 
 oObject = {'key': value} //some object here
-val = !!oObject //typecasting to boolean to set another value
+val = !!oObject; //typecasting to boolean to set another value
 //In the above case, val would be set to true
 ```
 Basically, what the above code does, is to use the value of oObject to cast to a boolean. 
