@@ -129,6 +129,43 @@ Quo principes efficiendi ex. Ei qui impetus omnesque, pri ea tota vidit dicant. 
 Has te zril voluptatum philosophia, cum velit graeci mnesarchum id, ex his nulla maiestatis. Usu no assum propriae theophrastus. Mazim quidam pri ut, gloriatur concludaturque quo cu. At purto lorem eos. Ne dicunt reprimique usu, mea ea suavitate constituto, sea no essent concludaturque. Melius prodesset nec ne, eu equidem honestatis mea, diam utamur id vim. Postulant contentiones pri no. </p>
 ```
 
+### Lists
+`<ol>` is for ordered lists. `<li>` is for list items. Inside any time of list, if you need to display an item, you must use an `li`. And of course, each `<li>` requires an `<ol>` or `<ul>`.
+
+`<ul>` is for unordered lists, aka bullet points. Same structure applies to unordered lists as ordered lists.
+
+```html
+<html>
+    <body>
+        <!-- Unordered List -->
+        <ul>
+            <!-- Every List Needs List Items <li></li> -->
+            <li>Coffee</li>
+            <li>Tea</li>
+            <li>Milk</li>
+        </ul>
+        <!-- Ordered List -->
+        <ol>
+            <li>First</li>
+            <li>Second</li>
+            <li>Third</li>
+        </ol>
+    </body>
+</html>
+```
+
+### Images
+
+For images, you have attributes `src`, `alt`, `width`, and `height`. 
+
+* `src` is for the path or location of your image.
+* `alt` is the text to display if the image doesn't load
+* `width/height` are the width/height of the image
+
+```html
+<img src="path-to-image.extension" alt="alternative text to show"/>
+```
+
 ## Workshop
 
 ### Tribute Page
