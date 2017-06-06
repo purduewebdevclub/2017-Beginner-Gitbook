@@ -46,11 +46,11 @@ There are a lot of other reasons, but these will be introduced as the meetings m
 
 ## Basic DataTypes in JavaScript
 Some of the ECMAScript standard datatypes:
-..* Boolean 
-..* Null
-..* Undefined
-..* Number
-..* String
+* Boolean 
+* Null
+* Undefined
+* Number
+* String
 
 # JSON
 
