@@ -129,44 +129,6 @@ Quo principes efficiendi ex. Ei qui impetus omnesque, pri ea tota vidit dicant. 
 Has te zril voluptatum philosophia, cum velit graeci mnesarchum id, ex his nulla maiestatis. Usu no assum propriae theophrastus. Mazim quidam pri ut, gloriatur concludaturque quo cu. At purto lorem eos. Ne dicunt reprimique usu, mea ea suavitate constituto, sea no essent concludaturque. Melius prodesset nec ne, eu equidem honestatis mea, diam utamur id vim. Postulant contentiones pri no. </p>
 ```
 
-### Lists
-`<ol>` is for ordered lists. `<li>` is for list items. Inside any time of list, if you need to display an item, you must use an `li`. And of course, each `<li>` requires an `<ol>` or `<ul>`.
-
-`<ul>` is for unordered lists, aka bullet points. Same structure applies to unordered lists as ordered lists.
-
-```html
-<html>
-    <body>
-        <!-- Unordered List -->
-        <ul>
-            <!-- Every List Needs List Items <li></li> -->
-            <li>Coffee</li>
-            <li>Tea</li>
-            <li>Milk</li>
-        </ul>
-        <!-- Ordered List -->
-        <ol>
-            <li>First</li>
-            <li>Second</li>
-            <li>Third</li>
-        </ol>
-    </body>
-</html>
-```
-
-### Images
-
-For images, you have attributes `src`, `alt`, `width`, and `height`. 
-
-* `src` is for the path or location of your image.
-* `alt` is the text to display if the image doesn't load
-* `width/height` are the width/height of the image
-
-```html
-<img src="path-to-image.extension" alt="alternative text to show"/>
-<!--Images are self closing; no ending tag required!-->
-```
-
 ## Workshop
 
 ### Tribute Page
@@ -197,6 +159,6 @@ Here is the basic HTML skeleton you will need to get started.
 </html>
 ```
 
-Save the above code into an index.html file using your preferred editor. Double click on the file and it should open a new webpage in your default browser. As you make changes to the HTML, reload the page in the browser to see the changes take effect.
+Save the above code into an index.html file using your preferred editor. Double click on the file nad it should open a new webpage in your default browser. As you make changes to the HTML, reload the page in the browser to see the changes take effect.
 
 Beyond these requirements, you are free to experiment as you wish. Give the page your own personal touch.
