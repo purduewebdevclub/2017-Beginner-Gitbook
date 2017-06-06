@@ -38,7 +38,7 @@ class Shape {
 
 This one is a little hard to wrap your heads around so we won't go into too much detail, but it is one of the most fundamental aspects of JavaScript. It is what makes JavaScript such a powerful language. 
 
-Basically, what this means is that functions can be constructed during execution, they can be passed around as variables or parameters to other functions and you can also return a function as the value of another function (what is referred to as a closure). 
+Basically, what this means is that functions can be constructed during execution, they can be passed around as variables or parameters to other functions and you can also return a function as the value of another function (what is referred to as a currying). 
 
 Confused? That's okay. If you wish to, you can read more about it [here](http://timmknight.github.io/2015/first-class-functions-javascript/)
 
