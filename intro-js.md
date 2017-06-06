@@ -107,10 +107,10 @@ But there's something weird about booleans in JS too. Who could have guessed rig
 JavaScript has something called *truthy* and *falsey* values. 
 
 The following are all falsey values: 
-..* undefined, null
-..* Boolean: *false*
-..* Number: 0, NaN
-..* String: ''
+* undefined, null
+* Boolean: *false*
+* Number: 0, NaN
+* String: ''
 
 Every other type in JavaScript evaluates to *truthy*
 
