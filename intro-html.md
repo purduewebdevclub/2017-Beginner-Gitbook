@@ -164,6 +164,7 @@ For images, you have attributes `src`, `alt`, `width`, and `height`.
 
 ```html
 <img src="path-to-image.extension" alt="alternative text to show"/>
+<!--Images are self closing; no ending tag required!-->
 ```
 
 ## Workshop
