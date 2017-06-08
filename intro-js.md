@@ -38,6 +38,13 @@ Originally they were implemented by creating multiple functions.
 
 Classes have now been provided as part of [ECMAScript 2015](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Classes), but this is just syntactic sugar. 
 
+#### Side Note
+What exactly is syntactic sugar? 
+
+Syntactic sugar is basically syntax for a programming language that makes it easier for developers to read and write. 
+
+So, getting back to classes. 
+
 Example class
 ```javascript 
 class Shape {
@@ -63,11 +70,6 @@ class Shape {
 
 The params represent the properties you want to set on your object. 
 
-#### Side Note
-What exactly is syntactic sugar? 
-
-Syntactic sugar is basically syntax for a programming language that makes it easier for developers to read and write. 
-
 ### Functions are first class objects
 
 This one is a little hard to wrap your heads around so we won't go into too much detail, but it is one of the most fundamental aspects of JavaScript. 
@@ -83,8 +85,6 @@ There are a lot of other reasons, but these will be introduced as the meetings m
 ## Basic data types in JavaScript
 Some of the ECMAScript standard datatypes:
 * Boolean 
-* Null
-* Undefined
 * Number
 * String
 
@@ -175,12 +175,12 @@ You might see this form of a boolean operator used in certain places, so we want
 It is possible to typecast an object (for example) to a boolean type using a double not operator (that is, !!)
 
 ```javascript 
-oObject = {'key': value} //some object here
-val = !!oObject; //typecasting to boolean to set another value
+obj = {'key': value} //some object here
+val = !!obj; //typecasting to boolean to set another value
 //In the above case, val would be set to true
 ```
-Basically, what the above code does, is to use the value of oObject to cast to a boolean. 
+Basically, what the above code does, is to use the value of obj to cast to a boolean. 
 
-If oObject was an empty object, undefined, null or any falsey value, val would have been set to false. 
+If obj was an empty object, undefined, null or any falsey value, val would have been set to false. 
 
 
