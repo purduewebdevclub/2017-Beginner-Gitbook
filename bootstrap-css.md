@@ -4,6 +4,8 @@
 
 Bootstrap is a CSS framework by Twitter. It's a collection of 1 CSS file and 1 JavaScript File. 
 
+You can find the documentation [here](http://getbootstrap.com/css/)
+
 ## Why use a framework?
 
 Writing your own CSS is way too much work. Web Development can be difficult to start sometimes, and Bootstrap CSS makes that easier. Why write CSS if you don't need to?
@@ -51,5 +53,30 @@ Example:
 Syntax:
 
        .col-size-width
+       
+### Responsive Columns With Offset
+It is also possible to create an offset for the columns relative to the edge of the screen. 
+
+This is useful for centering and improving general aesthetic appeal. 
+
+Example:
+```html
+<div class="row">
+    <div class="col-md-2 col-md-offset-2">
+    </div>
+    <div class="col-md-6 col-md-offset-2">
+    </div>
+</div>
+```
+
+This creates a column of width 2, with a margin from the left border. This margin is a whitespace column of width 2. 
+
+The second col div creates a column of width 6, with a margin from the left column. This margin is a whitespace column of width 2. 
+
+Notice how the width of the columns and the width of the offsets all add up to 12. 
 
 **Note: When you specify a width, it applies for that width and larger screen sizes**
+
+## Resources
+
+Link to the bootstrap docs: http://getbootstrap.com/css/
