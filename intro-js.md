@@ -39,9 +39,45 @@ Originally they were implemented by creating multiple functions.
 Classes have now been provided as part of [ECMAScript 2015](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Classes), but this is just syntactic sugar. 
 
 #### Side Note
-What exactly is syntactic sugar? 
+What is syntactic sugar? 
 
-Syntactic sugar is basically syntax for a programming language that makes it easier for developers to read and write. 
+First, we need to explain what the previously mentioned ECMAScript is. 
+
+ECMAScript is a specification standard for JavaScript. It is maintained by [Ecma International](https://en.wikipedia.org/wiki/Ecma_International)
+
+There have been several versions of ECMAScript published since June 1997, when version 1 was released. 
+
+Features have been regularly added to each subsequent version, and the latest version of ECMAScript, ES7, was released in June 2016. 
+
+An issue with ECMAScript is that not all browsers are fully capable of supporting the latest versions of ECMAScript. 
+
+This creates a problem because it means that native support is not available for the features within the browser itself.
+
+There is a workaround to this that will be introduced to you as the lessons move forward. 
+
+For now, take a look at this [website](http://caniuse.com/#search=es6) to see what browsers support the latest versions of ECMAScript. 
+
+You don't need to understand that web page completely, but you should have one takeaway from it. 
+
+Stay away from Internet Explorer!
+
+What does ECMAScript give us? 
+
+ECMAScript defines standards for features that are included in JavaScript. 
+
+For example, within earlier versions of JavaScript, classes were not defined with the ```class``` keyword. 
+
+There was a slightly more complicated route to defining classes in JavaScript. However, with ES6 onwards you can now define a class using the ```class``` keyword. 
+
+This does not mean that classes work the same way in JavaScript as they do in other OOP languages. 
+
+It simply means that the native way of defining classes in JavaScript has been extended to include a way to define classes with the ```class``` keyword. 
+
+That is syntactic sugar. 
+
+So what exactly is syntactic sugar? 
+
+Syntactic sugar is basically helpful syntax to make developer's lives easier for development, but in the end, in terms of functionality differences, there is none. 
 
 So, getting back to classes. 
 
