@@ -197,6 +197,6 @@ Here is the basic HTML skeleton you will need to get started.
 </html>
 ```
 
-Save the above code into an index.html file using your preferred editor. Double click on the file nad it should open a new webpage in your default browser. As you make changes to the HTML, reload the page in the browser to see the changes take effect.
+Save the above code into an index.html file using your preferred editor. Double click on the file and it should open a new webpage in your default browser. As you make changes to the HTML, reload the page in the browser to see the changes take effect.
 
 Beyond these requirements, you are free to experiment as you wish. Give the page your own personal touch.
