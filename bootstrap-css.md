@@ -16,6 +16,24 @@ Writing your own CSS is way too much work. Web Development can be difficult to s
 * Responsive Navbar
 * Responsive Scaffolding System
 
+## How To Install
+
+Using bootstrap on your web page is easy! Its just another style sheet. So in your HTML just include the following
+
+```html
+<html>
+    <head>
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    </head>
+    <body>
+    </body>
+</html>
+```
+Be sure to include the link tag inside your head tags, before your body tags. This is so that bootstrap can load before the content of your webpage loads. 
+
+The url you see in the link tag was obtained from [here](https://www.bootstrapcdn.com/)
+
+
 ## Scaffolding System
 Sometimes your websites have somewhat complex UIs where you'd like it to look a specific way on some devices vs other devices. The Scaffolding System lets you do that.
 
