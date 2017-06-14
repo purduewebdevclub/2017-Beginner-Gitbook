@@ -125,7 +125,7 @@ Attempt to link the two HTML pages using an Anchor (<a>) tag on each page, leadi
 If you manage to complete this, congratulations, you just made your first website! (The difference between a webpage and a website is the linkage of multiple pages together!)
 
 ### Finished Product
-We are not looking for something very intricate, but feel free to beautify your HTML as much as you like, using CSS! You can see a sample result for the workshop [here] (https://embed.plnkr.co/HrmNx3/).
+We are not looking for something very intricate, but feel free to beautify your HTML as much as you like, using CSS! You can see a sample result for the workshop [here](https://embed.plnkr.co/HrmNx3/).
 
 ## Resources
 [CSS reference @ MSDN](https://developer.mozilla.org/en-US/docs/Web/CSS/Reference)
