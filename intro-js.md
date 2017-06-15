@@ -124,6 +124,73 @@ Some of the ECMAScript standard datatypes:
 * Number
 * String
 
+# Objects
+
+What are objects in JavaScript? 
+
+Just like in any other programming language, an object is a standalone entity with its own individual properties. 
+
+You can construct an object in JavaScript using curly braces. 
+
+Let's say we want to create a car object, and call it myCar. Here is how you would do it. 
+
+```javascript
+var myCar = {};
+```
+
+Now, what if you want to assign properties to this car? We'll make the car have 4 wheels. 
+
+```javascript
+myCar.wheels = 4;
+```
+
+You access properties on an object using the dot('.') operator. The syntax is 
+
+```javascript
+object.property = value;
+```
+
+If the property does not already exist, it will be created and assigned the value you passed in.
+
+If the property already exists, the value is simply overwritten. 
+
+For example, lets say you decided to make your car have 6 wheels. (bear with me)
+
+```javascript
+myCar.wheels = 6;
+```
+
+We'll just add some more properties to our car for now
+
+```javascript
+myCar.driver = 'Zaid';
+myCar.make = 'BMW';
+myCar.name = 'Lisa';
+```
+
+So, your car now has four different properties: wheels, driver, make, name
+
+There is a different way to access object properties using square([ ]) brackets. 
+
+```javascript 
+myCar['driver']; //'Zaid'
+myCar['make']; //'BMW'
+myCar['name']; //'Lisa'
+```
+
+You can also assign properties to your object when you are first defining it like so, 
+
+```javascript
+var myCar = {
+    wheels: 4, 
+    driver: 'Zaid', 
+    make: 'BMW', 
+    name: 'Lisa'
+};
+```
+
+You can access these properties the same way you did earlier. 
+
 # JSON
 
 JavaScript Object Notation (JSON for short) is JavaScript object syntax. It is the primary form of information interchange on the web. 
