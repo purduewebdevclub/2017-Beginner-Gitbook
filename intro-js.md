@@ -39,17 +39,15 @@ Originally they were implemented by creating multiple functions.
 Classes have now been provided as part of [ECMAScript 2015](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Classes), but this is just syntactic sugar. 
 
 #### Side Note
-What is syntactic sugar? 
+Before we talk about syntactic sugar, we need to explain what the previously mentioned ECMAScript is. 
 
-First, we need to explain what the previously mentioned ECMAScript is. 
-
-ECMAScript is a specification standard for JavaScript. It is maintained by [Ecma International](https://en.wikipedia.org/wiki/Ecma_International)
+ECMAScript is a specification standard for JavaScript. It is maintained by [ECMA International](https://en.wikipedia.org/wiki/Ecma_International)
 
 There have been several versions of ECMAScript published since June 1997, when version 1 was released. 
 
 Features have been regularly added to each subsequent version, and the latest version of ECMAScript, ES7, was released in June 2016. 
 
-An issue with ECMAScript is that not all browsers are fully capable of supporting the latest versions of ECMAScript. 
+An issue with ECMAScript is that not all browsers are fully capable of supporting the latest versions of ECMAScript. This is due to the fact that every browser is responsible for updating their JavaScript interpreter to the latest ECMAScript standard.
 
 This creates a problem because it means that native support is not available for the features within the browser itself.
 
@@ -73,13 +71,15 @@ This does not mean that classes work the same way in JavaScript as they do in ot
 
 It simply means that the native way of defining classes in JavaScript has been extended to include a way to define classes with the ```class``` keyword. 
 
-That is syntactic sugar. 
-
 So what exactly is syntactic sugar? 
 
 Syntactic sugar is basically helpful syntax to make developer's lives easier for development, but in the end, in terms of functionality differences, there is none. 
 
-So, getting back to classes. 
+This happens when you take advantage of ES2015 features during development, but in the end, you just compile down to ES5, so there's no point as far as features are concerned. Why do this? 
+
+As mentioned before, older browsers aren't compatible with with the latest version of JavaScript. Therefore, if your users are on an early version of IE, they may not be able to utilize your site properly. To help with this, many developers choose to transpile down to ES5.
+
+### Classes
 
 Example class
 ```javascript 
@@ -106,6 +106,29 @@ class Shape {
 
 The params represent the properties you want to set on your object. 
 
+A constructor is a **function**. The only difference between a constructor and a function is that a constructor is a function that is **automatically called** when an instance of the class is created. 
+
+**Note: All rules for functions apply to constructors as well.**
+
+### Functions
+
+Functions are ways to divide up your JavaScript code. Functions that belong to specific classes are called `methods`.
+
+Functions can act differently than most strongly-typed languages. Here's an example function:
+```javascript
+function isEven(num) {
+    return num % 2 === 0;
+}
+```
+
+The function above doesn't have to specify a return type, since JavaScript is loosely typed. Also, it's not necessary to pass in `num` to the function `isEven`. If this is the case, JavaScript will try to run the function and error out if no argument is given and the mod operation is performed.
+
+In addition, there is NO GUARANTEE that a number will be passed in to the function, so you can use `typeof` to check the type.
+
+If you'd like to check if a parameter was passed, you can always check if the parameter is `null`.
+
+Point is, JavaScript can be a pain with out types.
+
 ### Functions are first class objects
 
 This one is a little hard to wrap your heads around so we won't go into too much detail, but it is one of the most fundamental aspects of JavaScript. 
@@ -114,7 +137,9 @@ It is what makes JavaScript such a powerful language.
 
 Basically, what this means is that functions can be constructed during execution, they can be passed around as variables or parameters to other functions and you can also return a function as the value of another function (what is referred to as currying). 
 
-Confused? That's okay. If you wish to, you can read more about it [here](http://timmknight.github.io/2015/first-class-functions-javascript/)
+One such usecase is for `callbacks`. `Callback`s are so that JavaScript knows what to do when an event or action has finished. `Callback` functions can be passed to tell JavaScript what to do when an event is done, such as when the data has been received from a server.
+
+Confused? That's okay. If you wish, you can read more about it [here](http://timmknight.github.io/2015/first-class-functions-javascript/)
 
 There are a lot of other reasons, but these will be introduced as the meetings move forward. 
 
@@ -178,7 +203,19 @@ myCar['make']; //'BMW'
 myCar['name']; //'Lisa'
 ```
 
-You can also assign properties to your object when you are first defining it like so, 
+**Why would you want to do this?**
+
+Sometimes you'd like to use a variable name to access a property from another object. For example,
+```javascript
+var prop = 'driver';
+myCar[prop] = "Zaid";
+
+//doesn't work
+myCar.prop = "Zaid";
+//The above doesn't work because JavaScript will interpret the property name as "prop"
+```
+
+You can also assign properties to your object when you are first defining it like so:
 
 ```javascript
 var myCar = {
@@ -259,16 +296,16 @@ How do you make use of this?
 ```javascript
 var myStr = '' //defining an empty string here
 if(myStr) {
-    //this branch will not fire
+    //Code will execute
 } else {
-    //this branch will fire
+    //Code not reached
 }
 
 var a = 2; //defining a as a number here
 if(a) {
-    //this branch will fire
+    //Code will execute
 } else {
-    //this branch will not fire 
+    //Code will not run
 }
 ```
 ## Important Note
@@ -285,5 +322,4 @@ val = !!obj; //typecasting to boolean to set another value
 Basically, what the above code does, is to use the value of obj to cast to a boolean. 
 
 If obj was an empty object, undefined, null or any falsey value, val would have been set to false. 
-
 
