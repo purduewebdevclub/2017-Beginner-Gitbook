@@ -55,7 +55,6 @@ Sizes:
 * sm
 * md
 * lg
-* xl //check this!
 
 Example:
 ```html
@@ -97,4 +96,4 @@ Notice how the width of the columns and the width of the offsets all add up to 1
 
 ## Resources
 
-Link to the bootstrap docs: http://getbootstrap.com/css/
+Link to the bootstrap docs: https://getbootstrap.com/css/
