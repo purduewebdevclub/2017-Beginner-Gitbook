@@ -7,3 +7,5 @@
 * [Meeting 2](meeting-2/SUMMARY.md)
     * [Bootstrap CSS](meeting-2/bootstrap-css.md)
     * [Intro to JavaScript](meeting-2/intro-js.md)
+* [Meeting 3](meeting-3/SUMMARY.md)
+    * [Advanced JS](meeting-3/advanced-js.md)
