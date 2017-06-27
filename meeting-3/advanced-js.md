@@ -1,6 +1,8 @@
 # Advanced JavaScript Topics
 
 Today's meeting will cover:
+* DOM access
+* Onclick events
 * Hoisting
 * `this` keyword
 * Scope of vars
@@ -9,6 +11,39 @@ Today's meeting will cover:
 
 
 **Note: examples of topics can be found in [example.js](./es5-sucks/example.js) in addition to this document. A running example can be found in the `es5-sucks` folder**
+
+
+## DOM Access
+You can access the model of your page by using javascript.
+
+```html
+
+<!--index.html-->
+<div id="outer_container">
+    <div id="text1"> I am the text1! </div>
+    <div id="text2"> I am the text2! </div>
+</div>
+```
+```javascript
+
+//script.js
+var text1 = document.getElementById('text1');
+var text2 = document.getElementById('text2');
+text1.innerHTML = 'I am the text3!';
+text2.innerHTML = 'I am the text4!';
+```
+
+## Onclick Listener
+```html
+<button id="btn1" (onclick)="log()">Click me!</button>
+```
+```javascript
+var counter = 0;
+function log() {
+    var button = document.getElementById("btn");
+    button.innerHTML = "I have been clicked " + counter + " times";
+}
+```
 
 ## Hoisting
 
@@ -202,3 +237,6 @@ let array = [2,4,6,8,10];
 let evens3 = array.map((number, index) => number1 * number2);
 //evens5: [0, 4, 12, 24, 40]
 ```
+
+## Spread Operator
+TODO
