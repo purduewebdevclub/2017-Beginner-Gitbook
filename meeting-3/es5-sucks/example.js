@@ -1,3 +1,11 @@
+/*-----------------------Start--of--button--example-----------------------------------------*/
+var counter = 0;
+function log() {
+    var button = document.getElementById("btn1");
+    button.innerHTML = "I have been clicked " + ++counter + " times";
+}
+/*------------------------------------------------------------------------------------------*/
+/*-----------------------Start--of--tests---------------------------------------------------*/
 var tests = {
     passed: 0,
     failed: 0,

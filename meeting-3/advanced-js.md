@@ -35,13 +35,13 @@ text2.innerHTML = 'I am the text4!';
 
 ## Onclick Listener
 ```html
-<button id="btn1" (onclick)="log()">Click me!</button>
+<button id="btn1" onclick="log()">Click me!</button>
 ```
 ```javascript
 var counter = 0;
 function log() {
     var button = document.getElementById("btn");
-    button.innerHTML = "I have been clicked " + counter + " times";
+    button.innerHTML = "I have been clicked " + ++counter + " times";
 }
 ```
 
@@ -239,4 +239,19 @@ let evens3 = array.map((number, index) => number1 * number2);
 ```
 
 ## Spread Operator
-TODO
+```javascript
+let array = [2,4,5,6,10];
+let newArray = [
+    ...array,
+    12
+];
+//is an alternative to this:
+let array = [2,4,5,6,10];
+array.push(12);
+```
+
+Above, you can see the Spread Operator. The Spread Operator is a representation of the elements in another array. It's very useful if you'd like a new copy of your array with an element appended to it. 
+
+The use-case that we used is very simple, but is very helpful for more complex arrays.
+
+Generally, if you don't like mutating (changing your original array), the spread operator is a nice alternative.
