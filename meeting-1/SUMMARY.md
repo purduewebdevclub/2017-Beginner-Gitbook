@@ -1,8 +1,14 @@
-# Meeting 1
+# Introduction to HTML
+## Why do you need to put in work?
+## Who is this for?
+## Development/Setup
+## Client/Server Model
+## HTML
+## Tags
+## Workshop
 
-Welcome to your first meeting! Here's what we're covering:
-* Client/Server Model
-* HTML
-    * What is HTML?
-    * Basic HTML Elements
-* CSS
+# CSS
+## Setup
+## Selectors
+## Workshop
+## Resources

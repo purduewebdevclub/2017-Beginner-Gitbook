@@ -1,4 +1,4 @@
-# Introduction
+# Introduction to JavaScript
 Welcome to the weird and wonderful world of JavaScript development. 
 JavaScript, as a language, is used primarily in the development of web applications and websites. 
 

@@ -1,11 +1,8 @@
-# Summary
-
-* [Introduction](README.md)
 * [Meeting 1](meeting-1/SUMMARY.md)
-    * [Introductions & HTML](meeting-1/intro-html.md)
-    * [Introduction to CSS](meeting-1/intro-css.md)
+	* [Introduction to HTML](meeting-1/1-intro-html.md)
+	* [CSS](meeting-1/2-intro-css.md)
 * [Meeting 2](meeting-2/SUMMARY.md)
-    * [Bootstrap CSS](meeting-2/bootstrap-css.md)
-    * [Intro to JavaScript](meeting-2/intro-js.md)
+	* [Bootstrap](meeting-2/1-bootstrap-css.md)
+	* [Introduction to JavaScript](meeting-2/2-intro-js.md)
 * [Meeting 3](meeting-3/SUMMARY.md)
-    * [Advanced JS](meeting-3/advanced-js.md)
+	* [Advanced JavaScript Topics](meeting-3/advanced-js.md)
