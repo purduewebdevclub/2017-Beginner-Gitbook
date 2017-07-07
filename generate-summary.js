@@ -37,7 +37,7 @@ function generateRootSummary() {
                 content.push(`\t* [${value[2]}](${folder + '/' + filteredFiles[index]})`);
             });
         });
-            fs.writeFileSync(__dirname + '/SUMMARY.md', content.join('\n') + '\n');
+        fs.writeFileSync(__dirname + '/SUMMARY.md', content.join('\n') + '\n');
     });
 }
 /**
@@ -54,7 +54,7 @@ function generateSummary(directory) {
             level1 = getHeaders(tree, 1);
             level2 = getHeaders(tree, 2);
             let arr = '';
-            level2.forEach((value) => arr += '## ' + value[2] + '\n');
+            level2.forEach((value) => arr += '* ' + value[2] + '\n');
             content.push('# ' + level1[0][2] + '\n' + arr);
         });
         fs.writeFileSync(directory + '/SUMMARY.md', content.join('\n'), (err) => err && console.log(err));
