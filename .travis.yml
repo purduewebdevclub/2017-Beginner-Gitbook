@@ -6,5 +6,5 @@ before_script:
 install:
   - npm install
 script:
-  - node generate-summary.js *
+  - node generate-summary.js -a
   - gitbook build

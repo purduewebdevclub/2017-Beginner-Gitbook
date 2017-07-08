@@ -24,46 +24,44 @@ function getHeaders(treeArray, headerLevel) { // header level is size of header
  */
 function generateRootSummary() {
     let content = [];
-    fs.readdir(__dirname, (err, files) => {
-        let filteredFiles = files.filter((file) => file.indexOf('meeting-') !== -1);
-        filteredFiles.forEach((folder) => {
-            let file = fs.readFileSync(folder + '/SUMMARY.md', 'utf8');
-            let tree = md.parse(file);
-            let level1 = getHeaders(tree, 1);
-            let files = fs.readdirSync(folder);
-            content.push(`* [Meeting ${folder.substr(8)}](${folder + '/SUMMARY.md'})`);
-            let filteredFiles = files.filter((file) => file.indexOf('.md') !== -1);
-            level1.forEach((value, index) => {
-                content.push(`\t* [${value[2]}](${folder + '/' + filteredFiles[index]})`);
-            });
+    let files = fs.readdirSync(__dirname);
+    let filteredFiles = files.filter((file) => file.indexOf('meeting-') !== -1);
+    filteredFiles.forEach((folder) => {
+        let file = fs.readFileSync(folder + '/SUMMARY.md', 'utf8');
+        let tree = md.parse(file);
+        let level1 = getHeaders(tree, 1);
+        let files = fs.readdirSync(folder);
+        content.push(`* [Meeting ${folder.substr(8)}](${folder + '/SUMMARY.md'})`);
+        let filteredFiles = files.filter((file) => file.indexOf('.md') !== -1);
+        level1.forEach((value, index) => {
+            content.push(`    * [${value[2]}](${folder + '/' + filteredFiles[index]})`);
         });
-        fs.writeFileSync(__dirname + '/SUMMARY.md', content.join('\n') + '\n');
     });
+    fs.writeFileSync(__dirname + '/SUMMARY.md', content.join('\n') + '\n');
 }
 /**
  * Generates summary given directory
  * @param  {string} directory
  */
 function generateSummary(directory) {
-    fs.readdir(directory, (err, files) => {
-        let content = [];
-        let filteredFiles = files.filter((file) => file.indexOf('SUMMARY.md') === -1 && file.indexOf('.md') !== -1);
-        filteredFiles.forEach((currentFile) => {
-            let file = fs.readFileSync(directory + '/' + currentFile, 'utf8');
-            let tree = md.parse(file);
-            level1 = getHeaders(tree, 1);
-            level2 = getHeaders(tree, 2);
-            let arr = '';
-            level2.forEach((value) => arr += '* ' + value[2] + '\n');
-            content.push('# ' + level1[0][2] + '\n' + arr);
-        });
-        fs.writeFileSync(directory + '/SUMMARY.md', content.join('\n'), (err) => err && console.log(err));
+    let files = fs.readdirSync(directory);
+    let content = [];
+    let filteredFiles = files.filter((file) => file.indexOf('SUMMARY.md') === -1 && file.indexOf('.md') !== -1);
+    filteredFiles.forEach((currentFile) => {
+        let file = fs.readFileSync(directory + '/' + currentFile, 'utf8');
+        let tree = md.parse(file);
+        level1 = getHeaders(tree, 1);
+        level2 = getHeaders(tree, 2);
+        let arr = '';
+        level2.forEach((value) => arr += '* ' + value[2] + '\n');
+        content.push('# ' + level1[0][2] + '\n' + arr);
     });
+    fs.writeFileSync(directory + '/SUMMARY.md', content.join('\n'), (err) => err && console.log(err));
 }
 
 if (process.argv.length < 3 || process.argv[2] === '.') {
     generateRootSummary();
-} else if (process.argv[2] === '*') {
+} else if (process.argv[2] === '-a') {
     let filteredFiles = fs.readdirSync('.').filter((file) => file.indexOf('meeting-') !== -1);
     filteredFiles.forEach((folderName) => {
         generateSummary(folderName);
