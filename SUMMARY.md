@@ -6,3 +6,5 @@
     * [Introduction to JavaScript](meeting-2/2-intro-js.md)
 * [Meeting 3](meeting-3/SUMMARY.md)
     * [Advanced JavaScript Topics](meeting-3/advanced-js.md)
+* [Meeting 4](meeting-4/SUMMARY.md)
+    * [Introduction to NodeJS](meeting-4/intro-to-node.md)
