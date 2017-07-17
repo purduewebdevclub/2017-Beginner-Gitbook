@@ -63,6 +63,8 @@ app.get('/', (req, res) => res.send('hello world'));
 app.listen(8000, () => console.log('Running on port 8000'));
 ```
 
+**Note: Don't Forget to do `npm install express --save`!**
+
 ### Explanation
 So, the first two lines are to set up express.
 Lines 3 and 4 are interesting. Line 4 starts a server on port 8000 and listens to requests. Line 3 has a few parts to it:
@@ -145,7 +147,7 @@ Added code:
 ```javascript
 ...
 let dir = process.argv[2];
-dir.readdir(dir, () => {}); // leave function empty for now.
+fs.readdir(dir, () => {}); // leave function empty for now.
 ```
 
 `dir.readdir` let's you read files from a directory asynchronously. Asynchronously means in the background, or parallely. 
