@@ -150,12 +150,12 @@ let dir = process.argv[2];
 fs.readdir(dir, () => {}); // leave function empty for now.
 ```
 
-`dir.readdir` let's you read files from a directory asynchronously. Asynchronously means in the background, or parallely. 
+`fs.readdir` let's you read files from a directory asynchronously. Asynchronously means in the background, or parallely. 
 The first parameter `dir` is the directory to be read from, the second parameter is the callback function.
 Callback functions allow you to tell JavaScript what to do when an event has triggered. For example, for on-click buttons,
 you have a callback function. That callback function is what is called when the `click` event is triggered, right?
 
-Similarly, `dir.readdir` has a callback function to call once `dir.readdir` is done retrieving the list of files.
+Similarly, `fs.readdir` has a callback function to call once `fs.readdir` is done retrieving the list of files.
 For now, that callback function is empty.
 
 #### Only printing .html files
@@ -165,7 +165,7 @@ If you `console.log(files)` then you should be able to see all the files/directo
 
 ```javascript
 ...
-dir.readdir(dir, (err, files) => {
+fs.readdir(dir, (err, files) => {
     console.log(files);
 }):
 ```
@@ -174,7 +174,7 @@ All we have to do now is filter the files! How do we do that? Use the `filter` a
 
 ```javascript
 ...
-dir.readdir(dir, (err, files) => {
+fs.readdir(dir, (err, files) => {
     let htmlFiles = files.filter(file => file.indexOf('.html') !== -1);
     console.log(htmlFiles);
 });
