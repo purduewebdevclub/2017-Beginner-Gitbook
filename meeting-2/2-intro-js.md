@@ -1,4 +1,4 @@
-# Introduction
+# Introduction to JavaScript
 Welcome to the weird and wonderful world of JavaScript development. 
 JavaScript, as a language, is used primarily in the development of web applications and websites. 
 
@@ -322,4 +322,3 @@ val = !!obj; //typecasting to boolean to set another value
 Basically, what the above code does, is to use the value of obj to cast to a boolean. 
 
 If obj was an empty object, undefined, null or any falsey value, val would have been set to false. 
-

@@ -1,6 +1,12 @@
-# Meeting 2
-Welcome to meeting 2!
+# Bootstrap
+* What is Bootstrap?
+* Why use a framework?
+* Features
+* How To Install
+* Scaffolding System
+* Resources
 
-We will cover:
-* Bootstrap CSS
-* Intro to JavaScript
+# Introduction to JavaScript
+* Why is JavaScript weird?
+* Basic data types in JavaScript
+* Important Note

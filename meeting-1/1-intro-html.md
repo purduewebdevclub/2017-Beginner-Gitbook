@@ -1,4 +1,4 @@
-# Introduction
+# Introduction to HTML
 WDC is here to provide the knowledge to those who are interested. However, some of that work must be taken up from you, as a student. ** As a student we expect you to attend meetings and complete parts of your project.**
 
 ## Why do you need to put in work?
