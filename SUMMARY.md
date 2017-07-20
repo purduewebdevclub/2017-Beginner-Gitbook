@@ -8,3 +8,5 @@
     * [Advanced JavaScript Topics](meeting-3/advanced-js.md)
 * [Meeting 4](meeting-4/SUMMARY.md)
     * [Introduction to NodeJS](meeting-4/intro-to-node.md)
+* [Meeting 5](meeting-5/SUMMARY.md)
+    * [Introduction to Asynchronous Programming](meeting-5/intro-async.md)
