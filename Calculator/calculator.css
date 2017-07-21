@@ -26,10 +26,15 @@
 
 	background-color:#048A81;
 
-	margin: 0px auto 0px 5px;
+	margin: 0px auto 0px 20px;
 
 	text-align: center;
 	line-height: 40px;
+
+	color: #8B2D04;
+	font-family: Times bold;
+	font-size: 1.5em;
+	font-weight: 1.2em;
 }
 
 
