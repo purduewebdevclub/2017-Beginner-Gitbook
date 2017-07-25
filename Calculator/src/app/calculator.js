@@ -1,4 +1,3 @@
-
 window.onload = () => {
 	init();
 }
@@ -93,3 +92,5 @@ class Key {
 		});	
 	}
 }
+
+export { init }
