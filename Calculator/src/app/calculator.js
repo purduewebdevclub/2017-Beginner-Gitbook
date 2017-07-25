@@ -1,8 +1,9 @@
+
 window.onload = () => {
 	init();
 }
 
-let init = () => {
+const init = () => {
 	//grabbing the keys here
 	let keys = document.querySelectorAll('.btn');
 	let keyInst;

@@ -4,13 +4,19 @@
   "description": "A calculator written in ES6 that will be compiled down to ES5",
   "main": "calculator_ES6.js",
   "scripts": {
-    "build": "babel ./calculator_ES6.js --out-file calculator_ES5.js",
+    "build": "babel src/ -d dist/",
+    "start": "npm run build && node ./dist/app/server.js",
+    "watch": "npm run build | nodemon ./dist/app/server.js --watch dist",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "author": "",
   "license": "ISC",
   "devDependencies": {
     "babel-cli": "^6.24.1",
-    "babel-preset-env": "^1.6.0"
+    "babel-preset-env": "^1.6.0",
+    "nodemon": "^1.11.0"
+  },
+  "dependencies": {
+    "express": "^4.15.3"
   }
 }
