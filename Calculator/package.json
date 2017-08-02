@@ -1,0 +1,28 @@
+{
+  "name": "calculator",
+  "version": "1.0.0",
+  "description": "A calculator written in ES6 that will be compiled down to ES5",
+  "main": "calculator_ES6.js",
+  "scripts": {
+    "lint": "eslint ./src/app --fix",
+    "build": "babel src/ -d dist/",
+    "start": "npm run build && node ./dist/app/server.js",
+    "watch": "npm run build | nodemon ./dist/app/server.js --watch dist",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "babel-cli": "^6.24.1",
+    "babel-plugin-add-module-exports": "^0.2.1",
+    "babel-preset-env": "^1.6.0",
+    "nodemon": "^1.11.0"
+  },
+  "dependencies": {
+    "async": "^2.5.0",
+    "body-parser": "^1.17.2",
+    "eslint": "^4.3.0",
+    "eslint-config-google": "^0.9.1",
+    "express": "^4.15.3"
+  }
+}

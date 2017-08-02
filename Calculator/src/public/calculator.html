@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <title>Simple Calculator</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <link rel="stylesheet" type="text/css" href="./calculator.css">
+  </head>
+  <body>
+    <div class="container" id="calc">
+      <div class="calcBody 
+      col-xs-10 col-xs-offset-2 
+      col-sm-5 col-sm-offset-4 
+      col-md-3 col-md-offset-4 text-center">
+        <div class="row" id="result">
+          <input class="form-control screen" type="text" name="result">
+        </div>
+        <div class="row">
+          <button type="button" class="btn btn-danger" id="allClear">AC</button>
+          <button type="button" class="btn btn-warning" id="clear">C</button>
+          <button type="button" class="btn btn-info" id="perc">%</button>
+          <button type="button" class="btn btn-info" id="div">/</button>
+        </div>
+        <div class="row">
+          <button type="button" class="btn btn-info">7</button>
+          <button type="button" class="btn btn-info">8</button>
+          <button type="button" class="btn btn-info">9</button>
+          <button type="button" class="btn btn-info" id="mul">*</button>
+        </div>
+        <div class="row">
+          <button type="button" class="btn btn-info">4</button>
+          <button type="button" class="btn btn-info">5</button>
+          <button type="button" class="btn btn-info">6</button>
+          <button type="button" class="btn btn-info" id="sub">-</button>
+        </div>
+        <div class="row">
+          <button type="button" class="btn btn-info">1</button>
+          <button type="button" class="btn btn-info">2</button>
+          <button type="button" class="btn btn-info">3</button>
+          <button type="button" class="btn btn-info" id="add">+</button>
+        </div>
+        <div class="row row-last">
+          <button type="button" class="btn btn-info">0</button>
+          <button type="button" class="btn btn-info" id="decimal">.</button>
+          <button type="button" class="btn btn-success" id="equals">=</button>
+        </div>
+      </div>
+    </div>
+  </body>
+  <script type="text/javascript" src="./calculator.js"></script>
+</html>
