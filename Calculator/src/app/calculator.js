@@ -41,7 +41,7 @@ class Init {
   }
 }
 
-/** 
+/**
 Class wrapper for the request object
 */
 class _Request {
@@ -88,7 +88,7 @@ class _Request {
   }
 
   /**
-  Build the request object 
+  Build the request object
   @return {Request} The request object
   */
   buildRequest() {
@@ -120,10 +120,10 @@ class Screen {
   evaluate() {
     // identifying the operator here
     let re = new RegExp('[^0-9a-zA-Z]');
-    let operator = this.element.value.match(re);
+    let operator = this.element.innerHTML.match(re);
 
     // identifying the input numbers here
-    let values = this.element.value.match(/\d+/g); // grab the numbers here
+    let values = this.element.innerHTML.match(/\d+/g); // grab the numbers here
     this.makeFetchRequest(operator, values);
   }
 
@@ -132,7 +132,7 @@ class Screen {
   *@param {selector} newElement - Each new button that is clicked on
   */
   updateScreen(newElement) {
-    this.element.value += newElement;
+    this.element.innerHTML += newElement;
   }
 
   /**
@@ -140,7 +140,7 @@ class Screen {
   *Clears the input screen
   */
   clearScreen() {
-    this.element.value = '';
+    this.element.innerHTML = '';
   }
 
   /**
@@ -177,9 +177,9 @@ class Key {
   * @param {string} value - This innerHTML of the key
   * @param {boolean} operatorBoolean - Denotes whether key is operand or not
   */
-  constructor(element, value, operatorBoolean) {
+  constructor(element, innerHTML, operatorBoolean) {
     this.element = element;
-    this.value = value;
+    this.innerHTML = innerHTML;
     this.operator = operatorBoolean; // boolean to check if operator or not
   }
 
@@ -188,7 +188,7 @@ class Key {
   * @return {string} - Returns the value of the key
   */
   getValue() {
-    return this.value;
+    return this.innerHTML;
   }
 
   /**
@@ -200,7 +200,7 @@ class Key {
   }
 
   /**
-  *Method to add click listener to each key element instance 
+  *Method to add click listener to each key element instance
   * @param {Screen} screen - instance of the screen class
   */
   addClickListener(screen) {
@@ -208,9 +208,9 @@ class Key {
       let clickedValue = this.getValue();
 
       if (this.isOperator()) {
-        if (this.value == '=') {
+        if (this.innerHTML == '=') {
           screen.evaluate();
-        } else if (this.value == 'AC' || this.value == 'C') {
+        } else if (this.innerHTML == 'AC' || this.innerHTML == 'C') {
           screen.clearScreen();
         } else {
           screen.updateScreen(clickedValue);
@@ -221,5 +221,3 @@ class Key {
     });
   }
 }
-
-
