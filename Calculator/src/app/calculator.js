@@ -1,96 +1,225 @@
 window.onload = () => {
-	init();
+  new Init();
+};
+
+/** Class to initiate the calculator functionality*/
+class Init {
+  /**
+  *Create keys, output and screen selectors
+  */
+  constructor() {
+    // grabbing the keys here
+    this.keys = document.querySelectorAll('.btn');
+
+
+    // grabbing the output here
+    this.output = document.querySelector('.screen');
+
+    // instantiating the screen here
+    this.screen = new Screen(this.output);
+
+    // adding click listener for each key here
+    this.addClickListeners(this.keys);
+  }
+
+  /**
+  * Create key instance for each key, and add click listener
+  * @param {array} keys - Array of key selectors
+  */
+  addClickListeners(keys) {
+    let keyInst;
+
+    this.keys.forEach((key) => {
+      if (key.id) {
+        keyInst = new Key(key, key.innerHTML, true);
+      } else {
+        keyInst = new Key(key, key.innerHTML, false);
+      }
+
+      keyInst.addClickListener(this.screen);
+    });
+  }
 }
 
-const init = () => {
-	//grabbing the keys here
-	let keys = document.querySelectorAll('.btn');
-	let keyInst;
+/** 
+Class wrapper for the request object
+*/
+class _Request {
+  /**
+  *Create a request object
+  * @param {string} param1 - String representation of number
+  * @param {string} param2 - String representation of number
+  * @param {string} operator - String representation of operator
+  */
+  constructor(param1, param2, operator) {
+    console.log(param1, param2, operator);
+    this.param1 = param1;
+    this.param2 = param2;
+    this.operator = operator;
+    this.url = '';
+    this.buildUrl();
+  }
 
-	// grabbing the output here
-	let output = document.querySelector('.screen');
+  /**
+  *A description of the buildUrl function
+  *Build the url endpoint based on operator
+  */
+  buildUrl() {
+    const baseUrl = 'http://localhost:3000';
 
-	//instantiating the screen here
-	let screen = new Screen(output);
+    switch (this.operator) {
+      case '+':
+        this.url = baseUrl + `/add?num1=${this.param1}&num2=${this.param2}`;
+        break;
+      case '-':
+        this.url = baseUrl + `/sub?num1=${this.param1}&num2=${this.param2}`;
+        break;
+      case '*':
+        this.url = baseUrl + `/mul?num1=${this.param1}&num2=${this.param2}`;
+        break;
+      case '/':
+        this.url = baseUrl + `/div?num1=${this.param1}&num2=${this.param2}`;
+        break;
+      case '%':
+        this.url = baseUrl + `/mod?num1=${this.param1}&num2=${this.param2}`;
+      default:
+        this.url = '';
+    }
+  }
 
-
-
-	// instantiating each key here
-	keys.forEach((key) => {
-		if(key.id) {
-			keyInst = new Key(key, key.innerHTML, true)
-		}else {
-			keyInst = new Key(key, key.innerHTML, false)
-		}
-
-		keyInst.addClickListener(screen);
-	});	
+  /**
+  Build the request object 
+  @return {Request} The request object
+  */
+  buildRequest() {
+    return new Request(this.url, {
+      headers: new Headers({
+        'Content-Type': 'application/json',
+      }),
+      method: 'GET',
+    });
+  }
 }
 
+/**
+*Class representing the screen
+*/
 class Screen {
-	constructor(element) {
-		this.element = element;
-	}
+  /**
+  * Create an instance of the screen
+  * @param {selector} element - Object referencing the output screen
+  */
+  constructor(element) {
+    console.log(typeof(element));
+    this.element = element;
+  }
 
-	evaluate() {
-		try {
-			let result = eval(this.element.value);
-			this.element.value = result;
-		}
-		catch(e) {
-			if(e instanceof SyntaxError) {
-				window.alert("Please check your equation again");
-			}else {
-				window.alert("Oops something went wrong! Please try again");
-				this.clearScreen();
-			}
-		}
-	}
+  /**
+  *This is a description of the evaluate function
+  */
+  evaluate() {
+    // identifying the operator here
+    let re = new RegExp('[^0-9a-zA-Z]');
+    let operator = this.element.value.match(re);
 
-	updateScreen(newElement) {
-		this.element.value += newElement;
-	}
+    // identifying the input numbers here
+    let values = this.element.value.match(/\d+/g); // grab the numbers here
+    this.makeFetchRequest(operator, values);
+  }
 
-	clearScreen() {
-		this.element.value = ""
-	}
+  /**
+  * This is a description of the updateScreen function
+  *@param {selector} newElement - Each new button that is clicked on
+  */
+  updateScreen(newElement) {
+    this.element.value += newElement;
+  }
+
+  /**
+  *This is a description of the clearScreen function
+  *Clears the input screen
+  */
+  clearScreen() {
+    this.element.value = '';
+  }
+
+  /**
+  *This is a description of the makeFetchRequest function
+  *@param {string} operator - String representation of the operator
+  *@param {Array<string>} values - Array of input values as strings
+  */
+  makeFetchRequest(operator, values) {
+    let request = new _Request(values[0], values[1], operator[0]).buildRequest();
+    fetch(request).then((response) => {
+      return response.json();
+    }).then((data) => {
+      this.updateWithResponse(data);
+    });
+  }
+
+  /**
+  *This is a description of the updateWithResponse function
+  *@param {string} res - String representing return value from server
+  */
+  updateWithResponse(res) {
+    this.clearScreen();
+    this.updateScreen(res);
+  }
 }
 
+/**
+*Represents each key on the calculator
+*/
 class Key {
-	constructor(element, value, operatorBoolean) {
-		this.element = element;
-		this.value = value;
-		this.operator = operatorBoolean; //boolean to check if operator or not
-	}
+  /**
+  *Create a key
+  * @param {selector} element - The element object of the key
+  * @param {string} value - This innerHTML of the key
+  * @param {boolean} operatorBoolean - Denotes whether key is operand or not
+  */
+  constructor(element, value, operatorBoolean) {
+    this.element = element;
+    this.value = value;
+    this.operator = operatorBoolean; // boolean to check if operator or not
+  }
 
-	getValue() {
-		return this.value;
-	}
+  /**
+  * Get the value of the key
+  * @return {string} - Returns the value of the key
+  */
+  getValue() {
+    return this.value;
+  }
 
-	isOperator() {
-		return this.operator;
-	}
+  /**
+  * Check if key is operator or not
+  * @return {boolean} - Returns boolean for whether the key is an operand or not
+  */
+  isOperator() {
+    return this.operator;
+  }
 
-	//method to add click listener to each key element instance 
-	addClickListener(screen) { //providing access to the screen instance here
+  /**
+  *Method to add click listener to each key element instance 
+  * @param {Screen} screen - instance of the screen class
+  */
+  addClickListener(screen) {
+    this.element.addEventListener('click', () => {
+      let clickedValue = this.getValue();
 
-		this.element.addEventListener("click", () => {
-			let clickedValue = this.getValue();
-
-			if(this.isOperator()) {
-				if(this.value == "=") {
-					screen.evaluate();
-				}else if(this.value == "AC" || this.value == "C") {
-					screen.clearScreen();
-				}else {
-					screen.updateScreen(clickedValue);
-				}
-			}else {
-				screen.updateScreen(clickedValue);
-			}
-
-		});	
-	}
+      if (this.isOperator()) {
+        if (this.value == '=') {
+          screen.evaluate();
+        } else if (this.value == 'AC' || this.value == 'C') {
+          screen.clearScreen();
+        } else {
+          screen.updateScreen(clickedValue);
+        }
+      } else {
+        screen.updateScreen(clickedValue);
+      }
+    });
+  }
 }
 
-export { init }
+
