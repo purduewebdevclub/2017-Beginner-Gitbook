@@ -60,7 +60,7 @@ var Init = function () {
   return Init;
 }();
 
-/** 
+/**
 Class wrapper for the request object
 */
 
@@ -115,7 +115,7 @@ var _Request = function () {
     }
 
     /**
-    Build the request object 
+    Build the request object
     @return {Request} The request object
     */
 
@@ -161,10 +161,10 @@ var Screen = function () {
     value: function evaluate() {
       // identifying the operator here
       var re = new RegExp('[^0-9a-zA-Z]');
-      var operator = this.element.value.match(re);
+      var operator = this.element.innerHTML.match(re);
 
       // identifying the input numbers here
-      var values = this.element.value.match(/\d+/g); // grab the numbers here
+      var values = this.element.innerHTML.match(/\d+/g); // grab the numbers here
       this.makeFetchRequest(operator, values);
     }
 
@@ -176,7 +176,7 @@ var Screen = function () {
   }, {
     key: 'updateScreen',
     value: function updateScreen(newElement) {
-      this.element.value += newElement;
+      this.element.innerHTML += newElement;
     }
 
     /**
@@ -187,7 +187,7 @@ var Screen = function () {
   }, {
     key: 'clearScreen',
     value: function clearScreen() {
-      this.element.value = '';
+      this.element.innerHTML = '';
     }
 
     /**
@@ -237,11 +237,11 @@ var Key = function () {
   * @param {string} value - This innerHTML of the key
   * @param {boolean} operatorBoolean - Denotes whether key is operand or not
   */
-  function Key(element, value, operatorBoolean) {
+  function Key(element, innerHTML, operatorBoolean) {
     _classCallCheck(this, Key);
 
     this.element = element;
-    this.value = value;
+    this.innerHTML = innerHTML;
     this.operator = operatorBoolean; // boolean to check if operator or not
   }
 
@@ -254,7 +254,7 @@ var Key = function () {
   _createClass(Key, [{
     key: 'getValue',
     value: function getValue() {
-      return this.value;
+      return this.innerHTML;
     }
 
     /**
@@ -269,7 +269,7 @@ var Key = function () {
     }
 
     /**
-    *Method to add click listener to each key element instance 
+    *Method to add click listener to each key element instance
     * @param {Screen} screen - instance of the screen class
     */
 
@@ -282,9 +282,9 @@ var Key = function () {
         var clickedValue = _this3.getValue();
 
         if (_this3.isOperator()) {
-          if (_this3.value == '=') {
+          if (_this3.innerHTML == '=') {
             screen.evaluate();
-          } else if (_this3.value == 'AC' || _this3.value == 'C') {
+          } else if (_this3.innerHTML == 'AC' || _this3.innerHTML == 'C') {
             screen.clearScreen();
           } else {
             screen.updateScreen(clickedValue);
