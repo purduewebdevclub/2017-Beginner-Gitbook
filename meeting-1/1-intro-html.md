@@ -1,6 +1,10 @@
 # Introduction to HTML
 WDC is here to provide the knowledge to those who are interested. However, some of that work must be taken up from you, as a student. ** As a student we expect you to attend meetings and complete parts of your project.**
 
+## Prerequisites
+1. Install a text editor such as [Visual Studio Code](https://code.visualstudio.com/)
+2. Install a browser such as [Google Chrome](https://www.google.com/chrome/)
+
 ## Why do you need to put in work?
 Web Development isn't just writing a few lines of HTML & CSS. It requires a large amount of work, and it's like many skills; you need to practice, practice, practice.
 
