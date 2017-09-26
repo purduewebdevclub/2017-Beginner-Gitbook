@@ -146,7 +146,7 @@ The basic requirements for this are that the web page
 
 A very basic wireframe of what it should look like can be found [here](http://imgur.com/a/zQvBy)
 
-A sample example can be found [here](https://codepen.io/redixhumayun/pen/pyGByG)
+An example can be found [here](https://codepen.io/redixhumayun/pen/pyGByG)
 
 Here is the basic HTML skeleton you will need to get started.
 
