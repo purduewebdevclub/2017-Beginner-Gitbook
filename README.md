@@ -14,7 +14,7 @@ By the end of the last meeting, you should have a finished web project.
 
 ## Project
 
-This semester we will be writing a resume website from scratch! At the end of each meeting, we will have a portion of the project built. By the end of the last meeting, you should have your own resume website. A demo is available [here].
+This semester we will be writing a resume website from scratch! At the end of each meeting, we will have a portion of the project built. By the end of the last meeting, you should have your own resume website.
 
 ## Meeting Topics
 
